@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CS:GO Stratēģijas un Padomi</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+  }
+  .header, .footer {
+    background-color: #333;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+  }
+  .navigation {
+    background-color: #222;
+    overflow: hidden;
+  }
+  .navigation a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  .navigation a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  .main-banner {
+    background-color: #555;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    background-image: url('csgo-banner.jpg');
+    background-size: cover;
+  }
+  .main-content {
+    padding: 2em;
+    background: #e2e2e2;
+  }
+  .column {
+    float: left;
+    width: 33.33%;
+    padding: 15px;
+    background-color: #f4f4f4;
+    margin: 10px;
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+    transition: transform 0.3s ease-in-out;
+  }
+  .column:hover {
+    transform: scale(1.03);
+  }
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .button {
+    display: inline-block;
+    width: auto;
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  .button:hover {
+    background-color: #c0392b;
+  }
+  .footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      margin: 10px 0;
+    }
+  }
+  .hidden { display: none; }
+  .dark-theme {
+    background-color: #333;
+    color: #f4f4f4;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Laipni lūdzam CS:GO Stratēģijas Lapā</h1>
+</div>
+
+<div class="navigation">
+  <a href="#home">Sākums</a>
+  <a href="#news">Jaunumi</a>
+  <a href="#contact">Kontakti</a>
+  <a href="#about">Par Mums</a>
+</div>
+
+<div class="main-banner">
+  <h2>Iemācieties un uzvarēt</h2>
+  <p>Pievienojies tūkstošiem spēlētāju, kuri jau uzlabo savas prasmes ar mūsu padomiem.</p>
+  <button id="themeToggle">Mainīt tēmu</button>
+</div>
+
+<div class="main-content">
+  <div class="row">
+    <div class="column">
+      <h3>Kartes Stratēģijas</h3>
+      <img src="map-strategy.jpg" alt="Map Strategies" style="width:100%">
+      <p>Iemācieties labākās aizsardzības un uzbrukuma taktikas katrā kartē.</p>
+    </div>
+    <div class="column">
+      <h3>Ieroču Ceļvedis</h3>
+      <img src="weapon-guide.jpg" alt="Weapon Guide" style="width:100%">
+      <p>Uzziniet, kuri ieroči ir visefektīvākie dažādās situācijās.</p>
+    </div>
+    <div class="column">
+      <h3>Spēlētāju Padomi</h3>
+      <img src="player-tips.jpg" alt="Player Tips" style="width:100%">
+      <p>Padomi un triki no profesionāļiem, kā uzlabot jūsu reakcijas un stratēģijas.</p>
+    </div>
+  </div>
+  <a href="#learnMore" class="button" id="learnMoreBtn">Uzzināt vairāk</a>
+  <div id="moreInfo" class="hidden">
+    <p>Papildus informācija par stratēģijām, treniņiem un taktiku. Mācieties no labākajiem un paaugstiniet savu līmeni jau šodien!</p>
+  </div>
+</div>
+
+<div class="footer">
+  <p>Autors: Mihails Petrakovs</p>
+</div>
+
+<script>
+  document.getElementById('themeToggle').addEventListener('click', function() {
+    document.body.classList.toggle('dark-theme');
+  });
+
+  document.getElementById('learnMoreBtn').addEventListener('click', function() {
+    var moreInfo = document.getElementById('moreInfo');
+    if(moreInfo.classList.contains('hidden')) {
+      moreInfo.classList.remove('hidden');
+      this.textContent = "Aizvērt";
+    } else {
+      moreInfo.classList.add('hidden');
+      this.textContent = "Uzzināt vairāk";
+    }
+  });
+</script>
+
+</body>
+</html>
